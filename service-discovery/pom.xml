@@ -9,6 +9,7 @@
     </parent>
     <artifactId>service-discovery</artifactId>
     <name>eureka server</name>
+    <packaging>jar</packaging>
     <description>eureka server</description>
 
     <dependencies>
