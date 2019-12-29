@@ -7,15 +7,18 @@
         <artifactId>demo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>user-service</artifactId>
-    <name>user service</name>
-    <packaging>jar</packaging>
-    <description>user service</description>
+    <artifactId>product-service</artifactId>
+    <name>product service</name>
+    <description>product service</description>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
 
         <dependency>
@@ -23,21 +26,6 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-
-        <!--<dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>${guava.version}</version>
-        </dependency>-->
     </dependencies>
 
 </project>

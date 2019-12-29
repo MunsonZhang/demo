@@ -1,17 +1,22 @@
 package com.zm.userservice.controller;
 
-import com.zm.userservice.dto.User;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.zm.userservice.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/user")
 public class UserController {
 
-    @PostMapping("/query")
-    public String getUser(User user){
-        System.out.println(user);
-        return user.getName();
+    @Autowired
+    UserService userService;
+
+    @GetMapping("/query/{id}")
+    public Optional getUser(@PathVariable String id){
+        System.out.println(id);
+        Optional user = userService.getUserById(Integer.parseInt(id));
+        return user;
     }
 }
