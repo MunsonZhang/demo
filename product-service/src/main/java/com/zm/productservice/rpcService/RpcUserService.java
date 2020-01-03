@@ -1,7 +1,6 @@
 package com.zm.productservice.rpcService;
 
-import com.zm.productservice.dto.User;
-import com.zm.productservice.rpcService.impl.UserServiceImpl;
+import com.zm.productservice.rpcService.impl.RpcUserServiceImpl;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.Optional;
 
-@FeignClient(name="userservice")
-public interface UserService {
+@FeignClient(name="userservice",fallback = RpcUserServiceImpl.class)
+public interface RpcUserService {
 
-    @GetMapping(value="/user/query/{id}")
+    @RequestMapping(value="/user/query/{id}",method = RequestMethod.GET)
     public Optional getUser(@PathVariable int id);
 
     @GetMapping(value="/user/query2")

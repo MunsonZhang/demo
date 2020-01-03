@@ -1,13 +1,13 @@
 package com.zm.productservice.rpcService.impl;
 
-import com.zm.productservice.dto.User;
-import com.zm.productservice.rpcService.UserService;
+import com.zm.productservice.rpcService.RpcUserService;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-//@Service("UserServiceImpl")
-public class UserServiceImpl implements UserService {
+@Component
+public class RpcUserServiceImpl implements RpcUserService {
     @Override
     public Optional getUser(int id) {
         System.out.println("getUser");

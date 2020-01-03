@@ -1,12 +1,12 @@
 package com.zm.productservice;
 
-import com.zm.productservice.rpcService.impl.UserServiceImpl;
+import com.zm.productservice.rpcService.impl.RpcUserServiceImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@EnableFeignClients(clients = UserServiceImpl.class)
+@EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication
 public class ProductServiceApplication {
