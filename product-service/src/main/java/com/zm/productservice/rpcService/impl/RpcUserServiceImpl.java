@@ -2,27 +2,25 @@ package com.zm.productservice.rpcService.impl;
 
 import com.zm.productservice.rpcService.RpcUserService;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
-import java.util.Optional;
 
 @Component
 public class RpcUserServiceImpl implements RpcUserService {
     @Override
-    public Optional getUser(int id) {
+    public String getUser(int id) {
         System.out.println("getUser");
-        return Optional.empty();
+        return "当前网络繁忙，请稍后再试";
     }
 
     @Override
-    public Optional getUser2() {
+    public String getUser2() {
         System.out.println("getUser2");
-        return Optional.empty();
+        return "当前网络繁忙，请稍后再试";
     }
 
     @Override
-    public Optional getUser3() {
+    public String getUser3() {
         System.out.println("getUser3");
-        return Optional.empty();
+        return "当前网络繁忙，请稍后再试";
     }
 }

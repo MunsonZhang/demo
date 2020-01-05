@@ -16,21 +16,21 @@ public class UserController {
 
     @GetMapping("/query/{id}")
     public String getUser(@PathVariable int id){
-        System.out.println("在service里");
+        System.out.println("在service3里");
         User user = userService.getUserById(id);
         return user.toString();
     }
 
     @GetMapping("/query2")
     public String getUser2(){
-        System.out.println("在service里");
+        System.out.println("在service3里");
         User user = userService.getUserById(43422);
         return user.toString();
     }
 
     @GetMapping("/query3")
     public String getUser3(){
-        System.out.println("在service里");
+        System.out.println("在service3里");
         User user = userService.getUserById(43425);
         return user.toString();
     }
